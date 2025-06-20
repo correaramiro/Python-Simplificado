@@ -10,7 +10,7 @@
 
 Creado a finales de los 80's y pricipios de los 90's, por Guido van Rossum.
 
-> La primera versión fue la 0.9.0, se lanzo en 1991.
+> La primera versión fue la **0.9.0**, se lanzo en **1991**.
 
 ## Caracteristicas
 
@@ -165,12 +165,12 @@ exponenciacion = a ** b #1000
 
 Operadores que se utilizan para comparar dos valores y devuelven un valor booleano (``True`` o ``False``), según el resultado de la comparación.
 
-* Igual a ``==`` (==) : devuelve ``True`` si ambos valores son iguales.
-* Diferente a ``!=`` (!=) : devuelve ``True`` si los valores son diferentes.
+* Igual a ``==`` : devuelve ``True`` si ambos valores son iguales.
+* Diferente a ``!=`` : devuelve ``True`` si los valores son diferentes.
 * Mayor que ``>`` : devuelve ``True`` si el primer valor es mayor que el segundo.
 * Menor que ``<`` : devuelve ``True`` si el primer valor es menor que el segundo.
-* Mayor o igual que ``>=`` (>=) : devuelve ``True`` si el primer valor es mayor o igual que el segundo.
-* Menor o igual que ``<=`` (<=) : devuelve ``True`` si el primer valor es menor o igual que el segundo.
+* Mayor o igual que ``>=`` : devuelve ``True`` si el primer valor es mayor o igual que el segundo.
+* Menor o igual que ``<=`` : devuelve ``True`` si el primer valor es menor o igual que el segundo.
 
 **Ejemplo**
 
