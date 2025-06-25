@@ -2,15 +2,25 @@
 
 ## Índice
 
+* [Intorducción a Python](#introducción-a-python)
 * [Caracteristicas](#caracteristicas)
 * [Aplicaciones](#aplicaciones)
+* [Instalación y configuración](#instalación-y-configuración)
+* [Primer programa en Python](#primer-programa-en-python)
 * [Tipos de datos basicos](#tipos-de-datos-basicos)
+* [Variables](#variables)
 * [Declaración y asignación de variables](#declaración-y-asignación-de-variables)
 * [Operadores](#operadores)
+* [Estructuras de contral](#estructuras-de-control)
+* [Bucles / Loops](#bucles--loops)
 
-Creado a finales de los 80's y pricipios de los 90's, por Guido van Rossum.
+## Introducción a Python
+
+Creado a finales de los 80's y pricipios de los 90's, por él programador holandés Guido van Rossum.
 
 > La primera versión fue la **0.9.0**, se lanzo en **1991**.
+
+Python se diseñó con el **objetivo de ser un lenguaje fácil de leer y escribir, con una sintaxis clara y concisa**. A lo largo de los años, ha evolucionado y ganado popularidad hasta convertirse en uno de los lenguajes de programación **más utilizados en el mundo**. 
 
 ## Caracteristicas
 
@@ -29,7 +39,32 @@ Creado a finales de los 80's y pricipios de los 90's, por Guido van Rossum.
 - Automatizado de tareas
 - Desarrollo de juegos
 
-***
+## Instalación y configuración
+
+1. Ve al sitio web oficial de Python: https://www.python.org
+2. En la sección **Download** encontrarás la última versión estable de Python. Selecciona la versión adecuada para tu sistema operativo (*Windows, macOS o Linux*).
+3. Descarga el **instalador de Python** correspondiente a tu sistema operativo.
+4. Una vez descargado, ejecuta el instalador. Asegúrate de marcar la opción **Add Python to PATH** durante el proceso de instalación en Windows. Esto te permitirá **ejecutar Python desde la línea de comandos**.
+5. Sigue las instrucciones del instalador y espera a que se complete la instalación. 
+
+Para saber si Python se instalo correactamente, prueba a abrir la linea de comandos y escribe el siguiente comando.
+
+```
+python --version
+```
+La consola deveria devolver la version de Python instalada.
+
+## Primer programa en Python
+
+1. Abre tu **IDE** o editor de texto preferido y crea un nuevo archivo.
+2. Nombra el archivo como ``hola_mundo.py``. La extensión ``.py`` indica que es un archivo de **Python**. 
+3. En el archivo, escribe el siguiente código:
+```python
+print("Hola mundo")
+```
+4. Guarda el archivo y ejecuta el programa. Si estás utilizando un **IDE**, busca la opción **Run** o **Execute**. 
+
+Verás que  el mensaje ``Hola mundo`` se imprime en la pantalla.
 
 ## Tipos de datos basicos
 
@@ -86,10 +121,15 @@ Representan valores de verdad: ``True`` y falso: ``False``. Se utilizan en opera
 es_mayor_de_edad = True
 tiene_documento = False
 ```
+> *``True`` y ``False`` siempre se escriben con mayuscula al inicio.*
+
+## Variables
+
+Las variables son contenedores que nos permiten almacenar y manipular datos en nuestros programas. Puedes pensar en una variable como una etiqueta a la que asignas a un valor específico. En Python, no es necesario declarar el tipo de datos de una variable de antemano, ya que Python infiere el tipo de datos automáticamente en función del valor asignado.
 
 ## Declaración y asignación de variables
 
-Para declarar y asignar variables se utiliza el operador ``=``.
+Para declarar y asignar variables se utiliza el operador ``=``, el nombre de la variable va a la izquierda y el valor a la derecha.
 
 **Ejemplo**
 
@@ -159,7 +199,7 @@ modulo = a % b #1
 exponenciacion = a ** b #1000
 ```
 
-> *Los comentarios en verde indican el resultado que devuelve python*.
+> *Los comentarios indican el resultado que devuelve python*.
 
 ### Comparación
 
@@ -186,7 +226,7 @@ mayor_o_igual = a >= b #True
 menor_o_igual = a <= b #False
 ```
 
-> *Los comentarios en verde indican el resultado que devuelve python*.
+> *Los comentarios indican el resultado que devuelve python*.
 
 ### Lógicos
 
@@ -207,6 +247,165 @@ resultado_or = (a > 15) or (b < 5) #True
 resultado_not = not (a > 5) #False
 ```
 
-> *Los comentarios en verde indican el resultado que devuelve python*.
+> *Los comentarios indican el resultado que devuelve python*.
 
 > *Python sigue las reglas de precedencia de operaciones, la procedencia es: **paréntesis, exponenciación, multiplicación/división, suma/resta, operadores de comparación y operadores lógicos***
+
+## Estructuras de control
+
+Las **estructuras de control** nos permiten controlar **el flujo de ejecución** de nuestros programas. En Python, las estructuras de control más comunes son las estructuras **condicionales** y los **bucles**. Estas estructuras nos permiten tomar **decisiones** y **repetir** bloques de código según ciertas condiciones.
+
+### Estructuras condicionales
+ 
+### ``if``
+
+La estructura ``if`` se utiliza para ejecutar un bloque de código si una **condición es verdadera**.
+
+**Sintaxis básica**
+
+```python
+if condicion:
+    # Bloque de código a ejecutar si la condición es verdadera
+    instrucciones
+```
+
+**Ejemplo**
+
+```python
+edad = 18
+
+if edad >= 18:
+    print("Eres mayor de edad")
+```
+
+> *En este ejemplo, si la variable* ``edad`` *es mayor o igual a **18**, se ejecutará el bloque de código dentro del* ``if`` *y se imprimirá el mensaje:* ``Eres mayor de edad``
+
+### ``if - else``
+
+La estructura ``if - else`` nos permite especificar un bloque de código **alternativo** que se ejecutará si la condición del ``if`` es **falsa**.
+
+**Ejemplo**
+
+```python
+edad = 15
+
+if edad >= 18:
+    print("Eres mayor de edad")
+else:
+    print("Eres menor de edad")
+```
+
+> *En este ejemplo, si la variable edad es **mayor o igual a 18**, se ejecutará el bloque de código dentro del* ``if`` *y se imprimirá el mensaje* ``Eres mayor de edad``*. De lo contrario, se ejecutará el bloque de código dentro del* ``else`` *y se imprimirá el mensaje* ``Eres menor de edad``
+
+### ``if - elif - else``
+
+La estructura ``if - elif - else`` nos permite especificar **múltiples condiciones** y bloques de código **alternativos**.
+
+**Sintaxis básica**
+
+```python
+if condicion_1:
+    # Bloque de código a ejecutar si la condicion_1 es verdadera.
+    instucciones
+elif condicion_2:
+    # Bloque de código a ejecutar si la condicion_2 es verdadera.
+    instucciones
+else:
+    # Bloque de código a ejecutar si ninguna de las condiciones anteriores es verdadera.
+    instrucciones
+```
+
+**Ejemplo**
+
+```python
+calificacion = 85
+
+if calificacion >= 90:
+    print("Exelente")
+elif calificacion >= 80:
+    print("Muy bueno")
+elif calificacion >= 70:
+    print("Bueno")
+else:
+    print("Necesita mejorar")
+```
+
+> *En este ejemplo, se evalúan múltiples condiciones en orden. Si la variable* **calificación** *es* **mayor o igual a 90**, *se imprime* ``Excelente``*. Si no se cumple la **primera condición**, pero si **calificación** es* **mayor o igual a 80**, *se imprime* ``Muy bueno``*. Si no se cumplen las condiciones anteriores, pero si* **calificación** *es* **mayor o igual a 70**, *se imprime* ``Bueno``*. Si ninguna de las condiciones anteriores es* **verdadera**, *se ejecuta el bloque* ``else`` *y se imprime* ``Necesita mejorar``
+
+## Bucles / Loops
+
+Los bucles nos permiten **repetir** un bloque de código varias veces. En Python, los bucles más comunes son ``for`` y ``while``
+
+### ``for``
+
+El bucle for se utiliza para **iterar** sobre una secuencia (*como una lista, una tupla o una cadena*) o cualquier objeto iterable.
+
+**Sintaxis básica**
+
+```python
+for variable in secuencia:
+    # Bloque de código a repetir
+    instrucciones
+```
+
+**Ejemplo**
+
+```python
+frutas = ["manzana", "banana", "naranja"]
+
+for fruta in frutas:
+    print(fruta)
+```
+
+> *En este ejemplo, el bucle for **itera** sobre la lista frutas. En cada iteración, la variable* ``fruta`` *toma el **valor de un elemento de la lista**, y se **ejecuta** el bloque de código dentro del **bucle**. En este caso, se imprime cada fruta en una línea separada.*
+
+### ``while``
+
+El bucle ``while`` se utiliza para **repetir** un bloque de código mientras una condición sea **verdadera**.
+
+**Sintaxis básica**
+
+```python
+while condicion:
+    # Bloque de código a repetir
+    instrucciones 
+```
+
+**Ejemplo**
+
+```python
+contador = 0
+
+while contador < 5:
+    print(contador)
+    contador += 1
+```
+
+> *En este ejemplo, el bucle* ``while`` *se **ejecuta mientras la variable*** ``contador`` *sea **menor que 5**. En cada iteración, se imprime el **valor de contador** y luego se **incrementa en 1** mediante la instrucción contador* ``+= 1``*. El bucle se **detendrá** cuando* ``contador`` *alcance el **valor de 5***.
+
+> *Es **importante** tener cuidado al usar el bucle* ``while``*, ya que, si la condición* **nunca** *se vuelve **falsa**, el bucle se ejecutará **indefinidamente**, lo que se conoce como un **bucle infinito**.*
+
+### Control de bucles
+
+Python proporciona algunas **instrucciones especiales** para **controlar** el flujo de ejecución dentro de los bucles.
+
+### ``break``
+
+La instrucción ``break`` se utiliza para **salir prematuramente de un bucle**, **independientemente** de la condición. Cuando se encuentra un ``break``, el bucle se **detiene** y el flujo de ejecución **continúa** con la siguiente instrucción fuera del bucle.
+
+**Ejemplo**
+
+```python
+contador = 0
+
+while True:
+    print(contador)
+    contador += 1
+
+    if contador == 5:
+        break
+```
+
+> *En este ejemplo, el bucle* ``while`` *se* **ejecuta indefinidamente** *debido a la condición* ``True``*. Sin embargo, dentro del bucle se utiliza una* **estructura condicional** ``if`` *para verificar si contador es* **igual a 5**. *Cuando se cumple esta condición, se ejecuta la instrucción* ``break``*, lo que hace que el bucle se detenga y el flujo de ejecución* **continúe** *con la siguiente instrucción fuera del bucle.*
+
+### ``continue``
