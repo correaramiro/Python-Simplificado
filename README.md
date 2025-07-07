@@ -13,6 +13,7 @@
 * [Operadores](#operadores)
 * [Estructuras de control](#estructuras-de-control)
 * [Bucles / Loops](#bucles--loops)
+* [Estructuras de Datos](#estructuras-de-datos)
 
 ## Introducción a Python
 
@@ -532,3 +533,5 @@ print(cuadrados)  # Imprime [4, 16]
 ```
 
 > En este ejemplo, se crea una nueva lista llamada ``cuadrados``, que contiene los cuadrados de los números pares de la lista **numeros**. La expresión ``x ** 2`` eleva cada elemento al **cuadrado**, y la condición ``if x % 2 == 0`` filtra solo los números **pares**.
+
+[def]: #estructuras-de-datos
